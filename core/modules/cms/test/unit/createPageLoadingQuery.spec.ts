@@ -8,7 +8,7 @@ describe('createPageLoadingQuery', () => {
     let [ appliedFilter ] = pageLoadingQuery.getAppliedFilters()
 
     expect(appliedFilter).toHaveProperty('attribute', filter.filterField)
-    expect(appliedFilter).toHaveProperty('value', { like: filter.filterValues })
+    expect(appliedFilter).toHaveProperty('value', { eq: filter.filterValues })
   })
 
   it('should return page loading query with base hierarchy if filter values are not provided', () => {

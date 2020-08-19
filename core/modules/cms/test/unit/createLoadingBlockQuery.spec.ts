@@ -8,7 +8,7 @@ describe('createLoadingBlockQuery', () => {
     let [ appliedFilter ] = loadingBlockQuery.getAppliedFilters()
 
     expect(appliedFilter).toHaveProperty('attribute', filter.filterField)
-    expect(appliedFilter).toHaveProperty('value', { like: filter.filterValues })
+    expect(appliedFilter).toHaveProperty('value', { eq: filter.filterValues })
   })
 
   it('should return loading block query object with base hierarchy if filter values are not provided', () => {
